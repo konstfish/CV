@@ -1,0 +1,136 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{fancy}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{purple}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{David}{Fischer}
+\title{DevOps Engineer}                               % optional, remove / comment the line if not wanted
+\email{david@konst.fish} 
+% \phone[mobile]{+43xxx}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"                              % optional, remove / comment the line if not wanted
+\homepage{konst.fish}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{konstfish}                        % optional, remove / comment the line if not wanted
+\social[github]{konstfish}                              % optional, remove / comment the line if not wanted
+\photo[64pt][0.6pt]{images/passfoto}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{\raggedright\color{black}\small{}}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2022--2023}{BSc (Hons) Computing}{University of Central Lancashire}{}{\textit{First Class Honours}}{Modules taken:
+\begin{itemize}%
+\item Cloud Computing
+\item Data Science
+\item Computational Thinking
+\item System Requirements \& Modeling
+\end{itemize}}
+% arguments 3 to 6 can be left empty
+\cventry{2016--2021}{Matura}{Higher Technical Institute Wiener Neustadt}{}{\textit{2.0 Avg Grade}}{Subject area of Information Technology. Graduated in Networking \& Database Design}
+
+%\section{Master thesis}
+%\cvitem{title}{\emph{Title}}
+%\cvitem{supervisors}{Supervisors}
+%\cvitem{description}{Short thesis abstract}
+
+\section{Experience}
+\subsection{Vocational}
+\cventry{Jun--Aug 2022}{DevOps Engineer}{ITSDONE Group}{Vienna, AT}{}{Developed a dynamic and scalable monitoring solution by implementing Prometheus/Thanos/Loki/Grafana using Kubernetes/Helm/Terraform/Ansible to centralize monitoring of customer equipment\newline{}}%
+
+\cventry{Jul--Nov 2021}{DevOps Engineer}{ITSDONE Group}{Vienna, AT}{}{Implemented network monitoring and capacity planning}
+
+\cventry{Jul--Aug 2020}{Junior DevOps Engineer}{ITSDONE Group}{Vienna, AT}{}{Implemented automated configuration backups across all customer network equipment}
+
+\cventry{Jul 2018 \& 2019}{Network Intern}{ITSDONE Group}{Vienna, AT}{}{}
+
+
+\subsection{Miscellaneous}
+\cventry{Nov--Apr 2022}{Gefreiter}{Austrian Armed Forces}{Eisenstadt}{}{Mandatory Military Service}
+
+\subsection{Volunteering}
+\cventry{2018--2019}{Team Lead}{robo4you}{Wiener Neustadt}{}{Managed my team in part of the HTL Wiener Neustadt robotics program, leading us to three titles in educational robotics}
+
+\section{Languages}
+\cvitemwithcomment{English}{Full professional proficiency}{}
+\cvitemwithcomment{German}{Native proficiency}{}
+%\cvitemwithcomment{Language 3}{Skill level}{Comment}
+
+\section{Skills}
+\cvitem{Languages}{Python, NodeJS, JavaScript, Swift}
+\cvitem{Tools}{Docker, Ansible, Terraform, Kubernetes, Helm, git, CI/CD, GitLab, GitHub, ObsidianMD}
+\cvitem{Data Analysis}{NumPy, Pandas, Matplotlib, Grafana, Prometheus, Loki}
+\cvitem{Cloud Computing}{Oracle Cloud, Microsoft Azure, Home Lab}
+
+% \cvitem{Data Analysis}{NumPy, Pandas, Matplotlib, Grafana, Prometheus}{category 6}{XXX, YYY, ZZZ}
+
+\section{Publications \& Projects}
+\cventry{2022--2023}{Bonsai}{University of Central Lancashire}{}{}{The development of Bonsai was aimed at creating a complete monitoring system that can collect metrics from any source and get them to a dashboard as quickly as possible.\newline{}\href{https://s.konst.fish/DavidFischer_ProjectReport2023.pdf}{See Publication}}
+
+\cventry{2020--2021}{Decentralized Autonomous Traffic System}{HTL Wiener Neustadt}{}{}{Creation of a functioning decentralized system and autonomous vehicles to test the viability of such a system in diverse real-world traffic scenarios.\newline{}\href{https://s.konst.fish/DA2021_5CHIF_SM_DATS_BrennerFischer.pdf}{See Publication}}
+
+\cventry{2019}{Grabber Designs and Software Solutions for the KIPR Wallaby}{HTL Wiener Neustadt}{}{}{Research Paper submitted in part of the European Conference on Educational Robotics 2019 in Vienna\newline{}\href{http://webspace.pria.at/ecer2019/papers/Paper_19-0603.pdf}{See Publication}}
+
+\section{Honours \& Awards}
+\cventry{Jul 2023}{The School Award for Academic Excellence for the Best Overall Performance}{University of Central Lancashire}{}{}{\href{https://s.konst.fish/David_Fischer_Best_Overall_Performance.pdf}{See Award}}
+
+\cventry{Jul 2023}{The School Award for Best Project}{University of Central Lancashire}{}{}{\href{https://s.konst.fish/David_Fischer_Best_Project_BSc_Computing.pdf}{See Award}}
+
+\cventry{Apr 2018}{First Place Overall}{ECER 2018}{}{}{Achieved first place in Seeding, Double Elimination \& Overall at the European Conference on Educational Robotics 2018 in Malta\newline{} \href{https://web.archive.org/web/20180913092807/https://pria.at/ecer/ecer-2018/}{See Award}}
+
+\cventry{Apr 2018}{First Place Seeding}{ECER 2018}{}{}{}
+
+\cventry{Apr 2018}{First Place Double Elimination}{ECER 2018}{}{}{}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+\end{document}
+
+
+%% end of file `template.tex'.
